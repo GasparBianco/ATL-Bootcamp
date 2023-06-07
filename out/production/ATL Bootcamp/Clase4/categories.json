@@ -1,0 +1,26 @@
+[
+  {
+    "category": "Geografia",
+    "description": "Preguntas relacionadas con geografia y distintas caracteristicas de distintas ubicaciones."
+  },
+  {
+    "category": "Deportes",
+    "description": "Preguntas relacionadas con diversos deportes y eventos deportivos."
+  },
+  {
+    "category": "Arte",
+    "description": "Preguntas relacionadas con pintura, escultura, arquitectura y otras formas de expresión artística."
+  },
+  {
+    "category": "Entretenimiento",
+    "description": "Preguntas relacionadas con películas, musica, pinturas, etc."
+  },
+  {
+    "category": "Historia",
+    "description": "Preguntas relacionadas con eventos históricos, personajes y períodos importantes."
+  },
+  {
+    "category": "Ciencia",
+    "description": "Preguntas relacionadas con diferentes ramas de la ciencia, descubrimientos y avances científicos."
+  }
+]
