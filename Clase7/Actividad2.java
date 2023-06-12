@@ -6,29 +6,26 @@ public class Actividad2 {
     public static void main ( String[] args){
 
         Scanner sc = new Scanner(System.in);
-        int[] numeros = new int[5];
-
+        System.out.println("Ingrese cuantos numeros quiere comparar");
+        int longitud = sc.nextInt();
+        int[] numeros = new int[longitud];
         System.out.println("Ingrese 1 numero y presione enter 5 veces.");
-        numeros[0] = sc.nextInt();
-        numeros[1] = sc.nextInt();
-        numeros[2] = sc.nextInt();
-        numeros[3] = sc.nextInt();
-        numeros[4] = sc.nextInt();
 
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = sc.nextInt();
+        }
         int numeroMax = numeros[0];
         int numeroMin = numeros[0];
 
-        for (int i = 0; i < 5; i++) {
+        for (int numero : numeros) {
 
-            if (numeroMin > numeros[i]){
-                numeroMin = numeros[i];
+            if (numeroMin > numero) {
+                numeroMin = numero;
             }
-            if (numeroMax < numeros[i]){
-                numeroMax = numeros[i];
+            if (numeroMax < numero) {
+                numeroMax = numero;
             }
-
         }
-
         System.out.println("El numero maximo es: " + numeroMax);
         System.out.println("El numero minimo es: " + numeroMin);
     }
