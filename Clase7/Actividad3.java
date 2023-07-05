@@ -15,7 +15,7 @@ public class Actividad3 {
         numeros[3] = sc.nextInt();
         numeros[4] = sc.nextInt();
 
-        float promedio = Arrays.stream(numeros).sum()/numeros.length ;
+        float promedio = (float) Arrays.stream(numeros).sum() /numeros.length ;
         System.out.println("El promedio es: " + promedio);
     }
 }
