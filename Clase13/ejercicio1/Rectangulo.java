@@ -7,13 +7,10 @@ public class Rectangulo extends PoligonoRegular{
         super(base, altura);
     }
 
-    public Rectangulo(){
-        super();
-    }
-
     public double calcularArea() {
         return base*altura;
     }
+
     public double calcularPerimetro() {
         return 2*base + 2*altura;
     }

@@ -37,13 +37,13 @@ public class Menu {
 
         switch (seleccionUsuario){
             case 1:
-                crearCirculo();
+                recibirDatosCirculo();
                 break;
             case 2:
-                crearTriangulo();
+                recibirDatosPoligonoRegular(2);
                 break;
             case 3:
-                crearRectangulo();
+               recibirDatosPoligonoRegular(3);
                 break;
             case 4:
                 mostrarMenuPrincipal();
@@ -52,45 +52,23 @@ public class Menu {
         }
     }
 
-    private void crearCirculo() {
-
+    private void recibirDatosCirculo() {
         System.out.println("Ingresa el radio del circulo");
         double radioCirculo = teclado.nextDouble();
         Circulo circulo = new Circulo();
-        circulo.setRadio(radioCirculo);
-        figurasCreadas.add(circulo);
-        mostrarMenuPrincipal();
     }
 
-    private void crearTriangulo() {
-
-        System.out.println("Ingresa la base del triangulo");
-        double baseTriangulo = teclado.nextDouble();
-        System.out.println("Ingresa la altura del triangulo");
-        double alturaTriangulo = teclado.nextDouble();
-        Triangulo triangulo = new Triangulo();
-        triangulo.setAltura(alturaTriangulo);
-        triangulo.setBase(baseTriangulo);
-        figurasCreadas.add(triangulo);
-        mostrarMenuPrincipal();
-
+    private void recibirDatosPoligonoRegular(int seleccionUsuario) {
+        System.out.println("Ingresa la base");
+        double base = teclado.nextDouble();
+        System.out.println("Ingresa la altura");
+        double altura = teclado.nextDouble();
+        if (seleccionUsuario==2){
+            Triangulo triangulo = new Triangulo(base, altura);
+        }else{
+            Rectangulo rectangulo = new Rectangulo(base,altura);
+        }
     }
-
-    private void crearRectangulo() {
-
-        System.out.println("Ingresa la base del rectangulo");
-        double baseRectangulo = teclado.nextDouble();
-        System.out.println("Ingresa la altura del rectangulo");
-        double alturaRectangulo = teclado.nextDouble();
-        Rectangulo rectangulo = new Rectangulo();
-        rectangulo.setAltura(alturaRectangulo);
-        rectangulo.setBase(baseRectangulo);
-        figurasCreadas.add(rectangulo);
-        mostrarMenuPrincipal();
-
-
-    }
-
     public void checkearRespuestaUsuarioMenuPrincipal() {
         int seleccionUsuario = teclado.nextInt();
 

@@ -1,6 +1,6 @@
 package Clase13.ejercicio1;
 
-public abstract class PoligonoRegular extends Figura {
+public abstract class PoligonoRegular implements Figura {
 
     protected double base;
     protected double altura;

@@ -1,6 +1,6 @@
 package Clase13.ejercicio1;
 
-public class Circulo extends Figura{
+public class Circulo implements Figura{
 
     private String colorDeFondo;
     private double radio;
@@ -30,6 +30,11 @@ public class Circulo extends Figura{
 
     public double calcularArea(){
         return Math.PI * (radio * radio) ;
+    }
+
+    @Override
+    public void crearFigura() {
+
     }
 
     public double calcularPerimetro(){
